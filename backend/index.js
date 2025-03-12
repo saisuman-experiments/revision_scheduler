@@ -1,29 +1,3 @@
-// const express = require('express');
-// const path = require('path');
-// const cors = require('cors');
-// const app = express();
-// const port = 5000;
-
-// // Enable CORS for all origins (if needed)
-// app.use(cors());
-
-// // Serve static files from React's build folder
-// app.use(express.static(path.join(__dirname, 'client/build')));
-
-// // Example API route
-// app.get('/api/hello', (req, res) => {
-//   res.json({ message: 'Hello from Node.js API!' });
-// });
-
-// // Catch-all route to serve React's frontend
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-// });
-
-// app.listen(port, () => {
-//   console.log(`Server is running at http://localhost:${port}`);
-// });
-
 
 
 const express = require('express');
@@ -40,11 +14,11 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static files from React's build folder
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, '/build')));
 
 // Catch-all route to serve React's frontend
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '/build', 'index.html'));
 });
 
 app.get('/api/data', (req, res) => {
