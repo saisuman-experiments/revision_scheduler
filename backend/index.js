@@ -31,7 +31,7 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 const cors = require('cors');
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // Enable CORS for all origins (if you want to allow cross-origin requests)
 app.use(cors());
