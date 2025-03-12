@@ -43,9 +43,9 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Catch-all route to serve React's frontend
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-// });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
 
 app.get('/api/data', (req, res) => {
     const filePath = path.join(__dirname, 'data.json');
