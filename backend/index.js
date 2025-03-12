@@ -40,11 +40,11 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static files from React's build folder
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'my-app/build')));
 
 // Catch-all route to serve React's frontend
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'my-app/build', 'index.html'));
 });
 
 app.get('/api/data', (req, res) => {
