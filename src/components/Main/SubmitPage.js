@@ -21,7 +21,7 @@ let navigate=useNavigate();
 
     try {
       // Send the data to the backend
-      const response = await axios.post("http://localhost:5000/api/update", data);
+      const response = await axios.post("https://revscheduler.herokuapp.com/api/update", data);
       console.log("Data updated:", response.data);
     } catch (error) {
       console.error("Error updating data:", error);

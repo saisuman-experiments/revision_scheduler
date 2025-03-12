@@ -17,7 +17,7 @@ export default function Main(){
     let newList=[];
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/data')
+        fetch('https://revscheduler.herokuapp.com/api/data')
           .then(response => response.json())
           .then(data => {
           //  console
